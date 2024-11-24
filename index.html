@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookmark</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="imgs/bookmark.png" type="image/x-icon" />
+  <link rel="stylesheet" href="CSS/all.min.css" />
+  <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+  <link rel="stylesheet" href="CSS/main.css" />
+</head>
+
+<body>
+  <main class="py-5">
+    <section class="container">
+      <header class="d-flex justify-content-center align-items-center flex-column">
+        <h1 class="book-head ff-Pa py-2 position-relative">Bookmarker</h1>
+      </header>
+
+      <div>
+        <div class="gap-4 sec-two mt-5 py-4 px-3 d-flex flex-column">
+          <h2 class="d-flex ff-Ri justify-content-center align-items-center"><i class="fa fa-bookmark pe-2"
+              aria-hidden="true"></i> Bookmark your favorite sites <i class="fa fa-bookmark ps-2"
+              aria-hidden="true"></i></h2>
+
+          <div class="ff-PT">
+            <label class="fw-bold pb-2" for="bookmarkName"> <i class="fa fa-book-bookmark pe-2" aria-hidden="true"></i>
+              Site Name</label>
+            <input oninput="validate(this)" class="form-control" type="text" name="BookmarkName" id="bookmarkName"
+              placeholder="Bookmark Name" />
+          </div>
+
+          <div class="ff-PT">
+            <label class="fw-bold pb-2" for="websiteUrl"> <i class="fa fa-link pe-1" aria-hidden="true"></i> Site
+              URL</label>
+            <input oninput="validate(this)" class="form-control" type="text" name="WebsiteUrl" id="websiteUrl"
+              placeholder="Website URL" />
+          </div>
+
+          <div class="ff-PT d-flex px- justify-content-center align-items-center">
+            <button onclick="addSite()" id="subBtn" type="button" class="btn btn-danger px-5">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <table class="table mt-4 text-center ff-PT bg-light text-capitalize">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+
+        <tbody id="tableContent"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

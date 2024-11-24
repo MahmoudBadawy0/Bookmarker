@@ -1,0 +1,100 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7ecde;
+}
+
+.ff-Pa {
+  font-family: "Pacifico", cursive;
+}
+.ff-Ri {
+  font-family: "Righteous", serif;
+}
+.ff-PT {
+  font-family: "PT Sans Caption", serif;
+}
+
+::selection {
+  background: #fec260;
+  color: #352e28;
+}
+
+.book-head {
+  font-size: 52px;
+  color: #352e28;
+  isolation: isolate;
+}
+
+.book-head::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  left: 0;
+  bottom: 11px;
+  background-color: #fec260;
+  transition: height 0.3s;
+  z-index: -1;
+}
+
+.book-head:hover::after {
+  height: 50%;
+}
+
+.sec-two {
+  border-top: 2px #352e28 dotted;
+  border-bottom: 2px #352e28 dotted;
+}
+
+.sec-two h2 {
+  font-size: 25px;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  color: transparent;
+}
+
+.form-control:focus {
+  border-color: #d99c39;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+.btn-danger {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #d1512d;
+  --bs-btn-border-color: #d1512d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #bb4120;
+  --bs-btn-hover-border-color: #a03315;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: #000;
+  letter-spacing: 1px;
+}
+
+.btn-visit {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #9eb23b;
+  --bs-btn-border-color: #9eb23b;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #8a9e23;
+  --bs-btn-hover-border-color: #6e8018;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: #000;
+}
+
+.btn-delete {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #eb1d36;
+  --bs-btn-border-color: #eb1d36;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d30820;
+  --bs-btn-hover-border-color: #ba081d;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: #000;
+}
